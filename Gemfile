@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.2.2"
 
+# beautifies soruce code
+gem 'htmlbeautifier'
+
 # Simplifies the management and storage of files and attachments
 gem 'activestorage'
 

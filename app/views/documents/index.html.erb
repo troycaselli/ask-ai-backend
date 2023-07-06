@@ -4,14 +4,11 @@
 <h1><%= ENV['OPENAI_API_KEY'] %></h1>
 
 <div id="documents">
+  <hr />
   <% @documents.each do |document| %>
     <%= render document %>
-    <p>
-      <% if document.pdf_file.attached? %>
-        <%= link_to "Show this document", url_for(document.pdf_file) %>
-      <% end %>
-    </p>
     <%= link_to "Show this document", document_path(document) %>
+  <hr />
   <% end %>
 </div>
 

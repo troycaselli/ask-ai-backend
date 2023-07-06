@@ -25,6 +25,7 @@ class DocumentsController < ApplicationController
 
     respond_to do |format|
       if @document.save
+        @document.pdf_file.attach(params[:document][:pdf_file]) if params[:document][:pdf_file].present?
         format.html { redirect_to document_url(@document), notice: "Document was successfully created." }
         format.json { render :show, status: :created, location: @document }
       else

@@ -3,14 +3,11 @@
     <strong>Title:</strong>
     <%= document.title %>
   </p>
-
   <% if document.pdf_file.attached? %>
     <p>
-      <strong>File:</strong>
-      <%= link_to "Download", url_for(document.pdf_file) %>
+      <%= link_to "View PDF", url_for(document.pdf_file) %>
     </p>
   <% else %>
-    <p>No file attached</p>
+    <p>No PDF attached</p>
   <% end %>
-
 </div>
