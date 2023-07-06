@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.2.2"
 
+# Allows for .env variables to be read and used in rails application
+gem 'dotenv-rails', groups: [:development, :test]
+
 # Allows for the configuration of Cross-Origin Resource Sharing (CORS) settings
 gem 'rack-cors'
 

@@ -1,6 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Documents</h1>
+<h1><%= ENV['OPENAI_API_KEY'] %></h1>
 
 <div id="documents">
   <% @documents.each do |document| %>
