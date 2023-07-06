@@ -7,8 +7,11 @@
   <% @documents.each do |document| %>
     <%= render document %>
     <p>
-      <%= link_to "Show this document", document %>
+      <% if document.pdf_file.attached? %>
+        <%= link_to "Show this document", url_for(document.pdf_file) %>
+      <% end %>
     </p>
+    <%= link_to "Show this document", document_path(document) %>
   <% end %>
 </div>
 

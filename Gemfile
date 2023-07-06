@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.2.2"
 
+# Simplifies the management and storage of files and attachments
+gem 'activestorage'
+
 # Allows for .env variables to be read and used in rails application
 gem 'dotenv-rails', groups: [:development, :test]
 
